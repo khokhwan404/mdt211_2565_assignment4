@@ -1,43 +1,26 @@
 ﻿class Program
 {    
-    public static Stack<string> stackInputName = new Stack<string>();
-    public static string InputName()
-    {
-        string name = Console.ReadLine();
-        return name;
-    }
-
-    public static int InputNumber()
-    {
+    public static Tree<string> ranking = new Tree<string>();
+    public static Stack<string> stackName = new Stack<string>();
+    
+    public static void GetRank(string worker) 
+    { 
         int number = int.Parse(Console.ReadLine());
-        return number;  
-    }
-
-    static void GetRank(Tree<string> ranking) 
-    {
-        if(ranking.GetLength() == 0)
-        {
-            string name = InputName();
-            ranking.AddChild(-1, name);
-            GetRank(ranking);
-        }   
-
-        int number = InputNumber();
         if(number != 0)
         {
-            string name = InputName();
-            stackInputName.Push(name);
-            ranking.AddChild(number, name);
-            GetRank(ranking);
+            string name = Console.ReadLine();
+            ranking.AddChild(worker, name);
+            GetRank(name);
+            stackName.Push(name);
 
             if(number >= 1)
             {
                 for (int i = 1; i < number; i++)
                 {
-                    string ndName = InputName();
-                    stackInputName.Push(ndName);
-                    ranking.AddSibling(i, ndName);
-                    GetRank(ranking);
+                    string ndName = Console.ReadLine();
+                    ranking.AddSibling(stackName.Pop(), ndName);
+                    GetRank(ndName);
+                    stackName.Push(ndName);
                 }
             }
         }
@@ -45,10 +28,17 @@
 
     static void Main(string[] args)
     {
-        Tree<string> ranking = new Tree<string>();
-        GetRank(ranking);
+        string inputName = Console.ReadLine();
+        ranking.AddChild(null, inputName);
+        GetRank(inputName); 
 
-        string searchNode = Console.ReadLine();
-        
+        string vanilla = Console.ReadLine();
+        Queue<string> searchNode = ranking.GetAllAncestor(vanilla);
+
+        int i = 0;
+        while(i <= searchNode.GetLength()){
+            Console.WriteLine(searchNode.Pop());
+            i++;
+        }
     }
 }

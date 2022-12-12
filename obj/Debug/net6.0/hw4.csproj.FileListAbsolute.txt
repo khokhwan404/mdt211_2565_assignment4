@@ -1,0 +1,15 @@
+/Users/khim/Desktop/hw4/bin/Debug/net6.0/hw4
+/Users/khim/Desktop/hw4/bin/Debug/net6.0/hw4.deps.json
+/Users/khim/Desktop/hw4/bin/Debug/net6.0/hw4.runtimeconfig.json
+/Users/khim/Desktop/hw4/bin/Debug/net6.0/hw4.dll
+/Users/khim/Desktop/hw4/bin/Debug/net6.0/hw4.pdb
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.csproj.AssemblyReference.cache
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.AssemblyInfoInputs.cache
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.AssemblyInfo.cs
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.csproj.CoreCompileInputs.cache
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.dll
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/refint/hw4.dll
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.pdb
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/hw4.genruntimeconfig.cache
+/Users/khim/Desktop/hw4/obj/Debug/net6.0/ref/hw4.dll

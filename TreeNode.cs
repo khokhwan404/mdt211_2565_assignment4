@@ -3,6 +3,7 @@ class TreeNode<T> where T : IComparable<T>
     private T value;
     private TreeNode<T> next = null;
     private TreeNode<T> child = null;
+    private TreeNode<T> head = null;
 
     public TreeNode(T value)
     {
@@ -19,6 +20,11 @@ class TreeNode<T> where T : IComparable<T>
         this.child = child;
     }
 
+    public void SetHead(TreeNode<T> head)
+    {
+        this.head = head;
+    }
+
     public TreeNode<T> Next()
     {
         return this.next;
@@ -27,6 +33,11 @@ class TreeNode<T> where T : IComparable<T>
     public TreeNode<T> Child()
     {
         return this.child;
+    }
+
+    public TreeNode<T> Head()
+    {
+        return this.head;
     }
 
     public T GetValue()
